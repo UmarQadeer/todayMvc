@@ -1,4 +1,11 @@
 const cors = require('cors');
+  var allowCrossDomain = function(req, res, next) {
+    res.header('Access-Control-Allow-Origin', "*");
+    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+    res.header('Access-Control-Allow-Headers', 'Content-Type');
+    next();
+}
+
 var express = require('express');
   app = express();
   port = process.env.PORT || 8080;
@@ -23,6 +30,7 @@ app.use(cors());
 app.options('*', cors());
 var routes = require('./api/routes/businessRoutes'); //importing route
 routes(app); //register the route
+
 
 
 app.listen(port);

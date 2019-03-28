@@ -589,14 +589,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var MyserviceService = /** @class */ (function () {
-    // uri = 'https://umar01.herokuapp.com/tasks';
-    // urii = 'https://umar01.herokuapp.com/user';
-    //   uri = 'tasks';
-    //   urii = 'user';
+    // uri = 'tasks';
+    // urii = 'user';
     function MyserviceService(http) {
         this.http = http;
-        this.uri = 'http://localhost:8080/tasks';
-        this.urii = 'http://localhost:8080/user';
+        //uri = 'http://localhost:8080/tasks';
+        // urii = 'http://localhost:8080/user';
+        this.uri = 'https://umar0.herokuapp.com/tasks';
+        this.urii = 'https://umar0.herokuapp.com/user';
     }
     MyserviceService.prototype.addUser = function (name, mobile, password) {
         var obj = {
